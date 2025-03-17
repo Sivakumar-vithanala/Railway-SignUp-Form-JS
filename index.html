@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC FORM</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <span class="title">Create Your IRCTC Account</span>
+        <span>SignIn</span>
+    </div>
+    <div class="message">
+        <span>1. Please use valid E-Mail ID, Mobile number and correct personal details in registration form. This
+            may be required for verification purpose.</span>
+        <span>2. Garbage / Junk values in profile may lead to deactivation of IRCTC account.</span>
+    </div>
+    <div>
+        <form action="" class="form-container">
+
+            <input type="text" placeholder="UserName" id="UserName" required>
+            <span id="UserNameErrMsg" class="ErrorMessage" style="display: none;"><ion-icon
+            name="close-circle-outline"></ion-icon>Username Required </span>
+
+            <input type="text" placeholder="FullName" id="FullName" required>
+            <span id="FullNameErrMsg" class="ErrorMsg" style="display: none;"><ion-icon
+                name="close-circle-outline"></ion-icon>Enter your FullName</span>
+
+            <input type="password" placeholder="EnterPassword" id="EnterPassword" required>
+            <span id="PasswordErrMsg" class="ErrorMsg" style="display: none;"><ion-icon
+                name="close-circle-outline"></ion-icon>Password Required </span>
+
+            <input type="password" placeholder="ConfirmPassword" id="ConfirmPassword" required>
+            <span id="ConfrimPasswordErrMsg" class="ErrorMsg" style="display: none;"><ion-icon
+                name="close-circle-outline"></ion-icon>Please Retype the Above Password Correctly</span>
+
+            <input type="email" placeholder="EnterYourEmail" id="EnterYourEmail">
+            <span id="EmailErrMsg" class="ErrorMsg" style="display: none;"><ion-icon
+                name="close-circle-outline"></ion-icon>Email Required </span>
+
+            <select name = "Countries">
+                <option value="MobileNumbers">+91 - India</option>
+                <option value="MobileNumbers">+91 - India(NRI)</option>
+                <option value="MobileNumbers">+93 - Afganisthan</option>
+                <option value="MobileNumbers">+54 - Argentina</option>
+                <option value="MobileNumbers">+61 - Australia</option>
+                <option value="MobileNumbers">+33 - France</option>
+                <option value="MobileNumbers">+49 - Germany</option>
+                <option value="MobileNumbers">+60 - Malasiya</option>
+                <option value="MobileNumbers">+63 - Phillipines</option>
+                <option value="MobileNumbers">+48 - Poland</option>
+            </select>
+            <input type="tel" placeholder="Mobile" id="Mobile">
+            <span id="MobileErrMsg" class="ErrorMsg" style="display: none;"><ion-icon
+                name="close-circle-outline"></ion-icon>Mobile Number Required </span>
+
+            <button type="submit" class="submit" id="submitBtn" onclick="onSubmit(event)">Submit</button>
+        </form>
+    </div>
+</div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
