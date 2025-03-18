@@ -83,7 +83,7 @@ function onSubmit(event) {
     PasswordErrMsg.textContent = "Password Cannot be Empty";
     PasswordErrMsg.style.display = "block";
     isValid = false;
-  } else if (EnterPassword.test(EnterPassword.value.trim())) {
+  } else if (PasswordReg.test(EnterPassword.value.trim())) {
     // alert('SUBMITTED')
     PasswordErrMsg.textContent = "";
     PasswordErrMsg.style.display = "none";
@@ -93,7 +93,7 @@ function onSubmit(event) {
     isValid = false;
   }
   // Validate confirm password
-  if (ConfirmPassword.value.trim() !== Password.value.trim()) {
+  if (ConfirmPassword.value.trim() !== ConfirmPassword.value.trim()) {
     ConfrimPasswordErrMsg.textContent = "Passwords do not match";
     ConfrimPasswordErrMsg.style.display = "block";
     isValid = false;
@@ -103,11 +103,11 @@ function onSubmit(event) {
   }
 
   //Email
-  if (Email.value === "") {
+  if (EnterYourEmail.value === "") {
     EmailErrMsg.textContent = "Email Cannot be Empty";
     EmailErrMsg.style.display = "block";
     isValid = false;
-  } else if (EmailReg.test(Email.value.trim())) {
+  } else if (EmailReg.test(EnterYourEmail.value.trim())) {
     // alert('SUBMITTED')
     EmailErrMsg.textContent = "";
     EmailErrMsg.style.display = "none";
@@ -122,7 +122,7 @@ function onSubmit(event) {
     MobileErrMsg.textContent = "Mobile Number Cannot be Empty";
     MobileErrMsg.style.display = "block";
     isValid = false;
-  } else if (FullNameReg.test(Mobile.value.trim())) {
+  } else if (MobileReg.test(Mobile.value.trim())) {
     // alert('SUBMITTED')
     MobileErrMsg.textContent = "";
     MobileErrMsg.style.display = "none";
@@ -133,11 +133,11 @@ function onSubmit(event) {
   }
   if (isValid) {
     alert("DATA SUBMITTED SUCCESSFULLY");
-    UserName.value === "";
-    FullName.value === "";
-    Password.value === "";
-    ConfirmPassword.value === "";
-    Email.value === "";
-    Mobile.value === "";
+    UserNameErrMsg.value === "";
+    FullNameErrMsg.value === "";
+    PasswordErrMsg.value === "";
+    ConfrimPasswordErrMsg.value === "";
+    EmailErrMsg.value === "";
+    MobileErrMsg.value === "";
   }
 }
